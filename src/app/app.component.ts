@@ -15,6 +15,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  help() {
+    alert('This application is designed by <Jim Yang>. (C) 2018');
+  }
 
 }

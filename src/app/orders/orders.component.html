@@ -7,8 +7,8 @@
     <mat-toolbar class="action-bar" color="accent">
       <div class="align-right">
         <button mat-raised-button>Add Android</button>
-        <button mat-raised-button>Add IPhone</button>
-        <button mat-raised-button>Add Windows Phone</button>
+        <button mat-raised-button >Add IPhone</button>
+        <button mat-raised-button >Add Windows Phone</button>
       </div>
     </mat-toolbar>
     <div class="table-grid">
@@ -19,20 +19,20 @@
         <thead>
           <tr>
             <td></td>
-            <td>PID</td>
-            <td>Description</td>
-            <td>Price</td>
-            <td>Quantity</td>
+            <td >PID</td>
+            <td >Description</td>
+            <td >Price</td>
+            <td >Quantity</td>
             <td></td>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let order of orders; let i = index">
             <td><img class="item-image" [src]="order.image" alt="img"></td>
-            <td><input type="text" class="form-control" placeholder="PID"></td>
-            <td><input type="text" class="form-control" placeholder="Description"></td>
-            <td><input type="text" class="form-control" placeholder="Price"></td>
-            <td><input type="text" class="form-control" placeholder="Quantity"></td>
+            <td><input ([ngmodel])="PID" type="text" class="form-control" placeholder="PID" (click)="readFile()">PID</td>
+            <td><input ([ngmodel])="Description" type="text" class="form-control" placeholder="Description" (click)="readFile()">Description</td>
+            <td><input ([ngmodel])="Price" type="text" class="form-control" placeholder="Price" (click)="readFile()">Price</td>
+            <td><input ([ngmodel])="Quantity" type="text" class="form-control" placeholder="Quantity" (click)="readFile()">Quantity</td>
             <td><button mat-raised-button color="primary" color="accent"><mat-icon>delete</mat-icon></button></td>
           </tr>
         </tbody>
